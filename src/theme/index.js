@@ -422,6 +422,9 @@ const theme = {
   },
   images: {
     root: {},
+    avatar: {
+      borderRadius: "circle",
+    },
     content: {
       display: "block",
       marginLeft: "auto",
