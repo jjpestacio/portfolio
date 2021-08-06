@@ -1,22 +1,20 @@
 /** @jsxImportSource theme-ui */
 import { Link as GatsbyLink } from "gatsby"
 import * as React from "react"
-import {
-  Box as BaseBox,
-  Grid as BaseGrid,
-  Link as ThemeLink,
-  useColorMode,
-} from "theme-ui"
+import { Grid as BaseGrid, Link as ThemeLink, useColorMode } from "theme-ui"
+
+const Anchor = ({ id }) => <div id={id} />
+
+const Article = ({ children, variant, ...props }) => (
+  <article variant={variant || "styles.article"} {...props}>
+    {children}
+  </article>
+)
 
 const Grid = ({ children, variant, ...props }) => (
-  <BaseGrid variant={variant || "boxes.default"} {...props}>
+  <BaseGrid variant={variant || "grids.default"} {...props}>
     {children}
   </BaseGrid>
-)
-const Box = ({ children, variant, ...props }) => (
-  <BaseBox variant={variant || "boxes.default"} {...props}>
-    {children}
-  </BaseBox>
 )
 
 const Link = ({ ...props }) => <ThemeLink as={GatsbyLink} {...props} />
@@ -43,4 +41,4 @@ const ToggleColorMode = props => {
   )
 }
 
-export { Box, Grid, Link, List, ToggleColorMode }
+export { Anchor, Article, Grid, Link, List, ToggleColorMode }

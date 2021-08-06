@@ -2,6 +2,7 @@
 import parse from "html-react-parser"
 import * as React from "react"
 import { Heading, Paragraph } from "theme-ui"
+import { Anchor, Article } from "../components/primitives"
 import { formatDateTime, renderImage } from "../utils"
 
 // TODO: is there a way to classify a component e.g. content-container, metadata, etc.
@@ -10,8 +11,8 @@ import { formatDateTime, renderImage } from "../utils"
 const Content = ({ id, title, author, createdAt, body, imageEdges }) => {
   // TODO: add anchor point
   return (
-    <article sx={{ variant: "styles.article" }}>
-      <div id={id} />
+    <Article>
+      <Anchor id={id} />
       <Heading as="h1">{title}</Heading>
       <Heading as="h4">{author}</Heading>
       <Heading as="h5">{formatDateTime(createdAt)}</Heading>
@@ -24,7 +25,7 @@ const Content = ({ id, title, author, createdAt, body, imageEdges }) => {
           },
         })}
       </Paragraph>
-    </article>
+    </Article>
   )
 }
 

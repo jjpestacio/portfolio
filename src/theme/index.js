@@ -113,24 +113,6 @@ const theme = {
       lineHeight: "subheading",
     },
   },
-  article: {
-    display: "flex",
-    flexDirection: "column",
-
-    title: {
-      fontSize: [4, 5, 6],
-      fontWeight: "bold",
-      letterSpacing: "title",
-      lineHeight: "title",
-    },
-    metadata: {
-      mt: 3,
-      fontSize: [1, 2],
-      fontWeight: "body",
-      letterSpacing: "headline",
-      lineHeight: "subheading",
-    },
-  },
   grids: {
     root: {
       // TODO: common
@@ -138,6 +120,9 @@ const theme = {
       // height: "100%",
       // width: "100%",
       border: "solid",
+    },
+    default: {
+      variant: "grids.root",
     },
     layout: {
       variant: "grids.root",
@@ -275,6 +260,10 @@ const theme = {
         backgroundColor: "red",
         outline: "1px solid slategrey",
       },
+    },
+    article: {
+      display: "flex",
+      flexDirection: "column",
     },
     h1: {
       variant: "text.heading",
