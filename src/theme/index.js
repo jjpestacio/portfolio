@@ -372,7 +372,9 @@ const theme = {
     },
   },
   grids: {
-    root: {},
+    root: {
+      gridGap: "2px",
+    },
     layout: {
       variant: "grids.root",
       gridTemplateColumns: "1fr 4fr 1fr",
@@ -383,6 +385,11 @@ const theme = {
       variant: "grids.root",
       gridTemplateColumns: "1fr 4fr minmax(20px, 6fr) 8fr",
       gridTemplateRows: "1fr",
+    },
+    sidebar: {
+      variant: "grids.root",
+      gridTemplateColumns: "1fr",
+      gridTemplateRows: "auto",
     },
     content: {
       variant: "grids.root",
@@ -430,6 +437,24 @@ const theme = {
         display: "inherit",
         pr: "2ch",
       },
+    },
+    sidebar: {
+      variant: "lists.root",
+      display: "block",
+      listStyleType: "none",
+      items: {
+        display: "inherit",
+        pr: "2ch",
+      },
+    },
+  },
+  images: {
+    root: {},
+    content: {
+      display: "block",
+      marginLeft: "auto",
+      marginRight: "auto",
+      maxWidth: "75%",
     },
   },
   styles: {

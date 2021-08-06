@@ -38,9 +38,9 @@ for image in images:
     file_type = image["type"].split("/")[-1]
     file_path = IMAGE_DIR / f"{file_name}.{file_type}"
 
-    image = get_image(image["id"])
+    image_content = get_image(image["id"])
 
     with open(file_path, "wb") as f:
-        f.write(image)
+        f.write(image_content)
 
     print(f"Downloaded image to {file_path}")

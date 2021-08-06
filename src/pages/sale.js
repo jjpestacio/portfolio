@@ -5,23 +5,23 @@ import Layout from "../components/layout"
 
 // TODO: how to do template string for author name
 
-const PoetryPage = ({ data }) => {
+const SalePage = ({ data }) => {
   const { directus, allFile } = data
-  const { poetry } = directus
+  const { sale } = directus
   const imageEdges = allFile.edges
 
-  const sidebarRefs = poetry.map(poem => ({ id: poem.id, title: poem.title }))
+  const sidebarRefs = sale.map(item => ({ id: item.id, title: item.title }))
 
   return (
     <Layout sidebarRefs={sidebarRefs}>
-      {poetry.map(post => (
+      {sale.map(item => (
         <Content
-          key={post.id}
-          id={post.id}
-          title={post.title}
-          author={post.user_created.email}
-          createdAt={post.date_created}
-          body={post.text}
+          key={item.id}
+          id={item.id}
+          title={item.title}
+          author={item.user_created.email}
+          createdAt={item.date_created}
+          body={item.description}
           imageEdges={imageEdges}
         />
       ))}
@@ -30,7 +30,7 @@ const PoetryPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query MyQuery {
+  query GetSaleCollection {
     allFile(filter: { extension: { regex: "/(jpg)|(png)|(jpeg)/" } }) {
       edges {
         node {
@@ -46,10 +46,12 @@ export const query = graphql`
       }
     }
     directus {
-      poetry {
+      sale {
         id
+        status
         title
-        text
+        price
+        description
         date_created
         user_created {
           email
@@ -61,4 +63,4 @@ export const query = graphql`
   }
 `
 
-export default PoetryPage
+export default SalePage

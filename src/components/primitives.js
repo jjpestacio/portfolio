@@ -13,9 +13,10 @@ const Link = ({ ...props }) => <ThemeLink as={GatsbyLink} {...props} />
 
 const List = ({ children, variant }) => (
   <ul sx={{ variant: variant }}>
-    {children.map(child => (
-      <li sx={{ variant: `${variant}.items` }}>{child}</li>
-    ))}
+    {children &&
+      children.map(child => (
+        <li sx={{ variant: `${variant}.items` }}>{child}</li>
+      ))}
   </ul>
 )
 
