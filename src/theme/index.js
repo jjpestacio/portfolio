@@ -28,6 +28,7 @@ const theme = {
     instagram: "#e1306c",
     text: "#1f2d3d",
     background: "#F4F1DE",
+    header: "#EBE5C2",
     elevated: "#ffffff",
     sheet: "#f9fafc",
     sunken: "#e0e6ed",
@@ -344,8 +345,11 @@ const theme = {
     },
   },
   grids: {
+    // TODO: make header resize
     root: {
       gridGap: "2px",
+      //height: "100%",
+      width: "100%",
     },
     layout: {
       variant: "grids.root",
@@ -355,7 +359,14 @@ const theme = {
     },
     header: {
       variant: "grids.root",
+      backgroundColor: "header",
       gridTemplateColumns: "1fr 4fr minmax(20px, 6fr) 8fr",
+      gridTemplateRows: "1fr",
+    },
+    footer: {
+      variant: "grids.root",
+      backgroundColor: "header",
+      gridTemplateColumns: "1fr",
       gridTemplateRows: "1fr",
     },
     sidebar: {
@@ -367,6 +378,11 @@ const theme = {
       variant: "grids.root",
       gridTemplateColumns: "1fr 1fr",
       gridTemplateRows: "auto auto auto",
+    },
+    social: {
+      variant: "grids.root",
+      gridTemplateColumns: "repeat(auto-fit, minmax(32px, 1fr))",
+      //gridTemplateRows: "1fr",
     },
   },
   boxes: {
@@ -388,26 +404,28 @@ const theme = {
       },
     },
   },
+  flex: {
+    center: {
+      border: "solid",
+      borderColor: "green",
+      justifyContent: "space-evenly",
+      alignItems: "center",
+      height: "100%",
+      width: "100%",
+    },
+  },
   lists: {
     root: {
-      padding: "unset",
-      paddingBlockStart: "unset",
-      paddingBlockEnd: "unset",
-      paddingInlineStart: "unset",
-      paddingInlineEnd: "unset",
-      margin: "unset",
-      marginBlockStart: "unset",
-      marginBlockEnd: "unset",
-      marginInlineStart: "unset",
-      marginInlineEnd: "unset",
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
     },
     navigation: {
       variant: "lists.root",
-      display: "inline",
       listStyleType: "none",
       items: {
-        display: "inherit",
-        pr: "2ch",
+        //display: "inherit",
+        //pr: "2ch",
       },
     },
     sidebar: {

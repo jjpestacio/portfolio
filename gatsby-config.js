@@ -47,26 +47,5 @@ module.exports = {
         path: `${__dirname}/src/images/content/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `social`,
-        path: `${__dirname}/src/images/social/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `icons`,
-        path: `${__dirname}/src/images/icons/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `misc`,
-        path: `${__dirname}/src/images/misc/`,
-      },
-    },
   ],
 }

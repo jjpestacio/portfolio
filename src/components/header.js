@@ -1,8 +1,9 @@
 /** @jsxImportSource theme-ui */
 import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
-import { Grid, Text } from "theme-ui"
+import { Grid } from "theme-ui"
 import { Box, Link, List, ToggleColorMode } from "../components/primitives"
+import { SocialMedia } from "../components/social"
 
 // TODO: style avatar
 // - sx prop not working ...
@@ -13,7 +14,7 @@ const Header = () => (
       <StaticImage alt="me!" src="../images/avatar.jpg" />
     </Box>
     <Box sx={{ gridColumn: "2" }}>
-      <Text>social media</Text>
+      <SocialMedia />
     </Box>
     <Box sx={{ gridColumn: "3" }}>
       <ToggleColorMode />
