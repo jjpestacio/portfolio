@@ -31,7 +31,12 @@ const PoetryPage = ({ data }) => {
 
 export const query = graphql`
   query MyQuery {
-    allFile(filter: { extension: { regex: "/(jpg)|(png)|(jpeg)/" } }) {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "content" }
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+      }
+    ) {
       edges {
         node {
           base

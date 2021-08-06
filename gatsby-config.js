@@ -32,19 +32,40 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    {
       resolve: "@directus/gatsby-source-directus",
       options: {
         url: process.env.DIRECTUS_URL,
         auth: {
           token: process.env.DIRECTUS_API_KEY,
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/images/content/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `social`,
+        path: `${__dirname}/src/images/social/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `icons`,
+        path: `${__dirname}/src/images/icons/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `misc`,
+        path: `${__dirname}/src/images/misc/`,
       },
     },
   ],
