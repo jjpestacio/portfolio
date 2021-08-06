@@ -27,7 +27,7 @@ const theme = {
     facebook: "#3b5998",
     instagram: "#e1306c",
     text: "#1f2d3d",
-    background: "snow",
+    background: "#F4F1DE",
     elevated: "#ffffff",
     sheet: "#f9fafc",
     sunken: "#e0e6ed",
@@ -75,15 +75,7 @@ const theme = {
     headline: "0.009em",
   },
   sizes: {
-    widePlus: 2048,
-    wide: 1536,
-    layoutPlus: 1200,
-    layout: 1024,
-    copyUltra: 980,
-    copyPlus: 768,
-    copy: 680,
-    narrowPlus: 600,
-    narrow: 512,
+    // TODO
   },
   radii: {
     small: 4,
@@ -351,26 +343,6 @@ const theme = {
       whiteSpace: "nowrap",
     },
   },
-  layout: {
-    container: {
-      maxWidth: ["layout", null, "layoutPlus"],
-      width: "100%",
-      mx: "auto",
-      px: 3,
-    },
-    wide: {
-      variant: "layout.container",
-      maxWidth: ["layout", null, "wide"],
-    },
-    copy: {
-      variant: "layout.container",
-      maxWidth: ["copy", null, "copyPlus"],
-    },
-    narrow: {
-      variant: "layout.container",
-      maxWidth: ["narrow", null, "narrowPlus"],
-    },
-  },
   grids: {
     root: {
       gridGap: "2px",
@@ -515,6 +487,7 @@ const theme = {
       borderColor: "border",
     },
     a: {
+      // TODO: style links
       color: "primary",
       textDecoration: "underline",
       textUnderlinePosition: "under",
