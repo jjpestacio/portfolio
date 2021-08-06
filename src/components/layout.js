@@ -4,7 +4,6 @@ import * as React from "react"
 import { Grid, ThemeProvider } from "theme-ui"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
-import { Box } from "../components/primitives"
 import Sidebar from "../components/Sidebar"
 import theme from "../theme/index"
 
@@ -24,18 +23,18 @@ const Layout = ({ children, ...props }) => {
   return (
     <ThemeProvider theme={theme}>
       <Grid variant="grids.layout">
-        <Box sx={{ gridColumn: "1 / 4", gridRow: "1" }}>
+        <Grid variant="grids.header">
           <Header />
-        </Box>
-        <Box sx={{ gridColumn: "1 / 4", gridRow: "3", textAlign: "center" }}>
+        </Grid>
+        <Grid variant="grids.footer">
           <Footer />
-        </Box>
-        <Box sx={{ gridColumn: "3", gridRow: "2" }}>
+        </Grid>
+        <Grid variant="grids.sidebar">
           <Sidebar items={sidebarRefs} />
-        </Box>
-        <Box variant="boxes.page" sx={{ gridColumn: "2", gridRow: "2" }}>
+        </Grid>
+        <Grid variant="grids.page">
           <main>{children}</main>
-        </Box>
+        </Grid>
       </Grid>
     </ThemeProvider>
   )

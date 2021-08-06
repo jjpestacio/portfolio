@@ -1,13 +1,6 @@
 import * as React from "react"
-import { Grid, Text } from "theme-ui"
-import { Box } from "../components/primitives"
+import { Text } from "theme-ui"
 
-const Footer = () => (
-  <Grid variant="grids.footer">
-    <Box sx={{ textAlign: "center" }}>
-      <Text variant="text.eyebrow">JJ Estacio</Text>
-    </Box>
-  </Grid>
-)
+const Footer = () => <Text variant="text.eyebrow">JJ Estacio</Text>
 
 export default Footer

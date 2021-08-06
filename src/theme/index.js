@@ -99,319 +99,126 @@ const theme = {
       mt: 0,
       mb: 0,
     },
-    ultratitle: {
-      fontSize: [5, 6, 7],
-      lineHeight: "limit",
-      fontWeight: "bold",
-      letterSpacing: "title",
-    },
     title: {
       fontSize: [4, 5, 6],
       fontWeight: "bold",
       letterSpacing: "title",
       lineHeight: "title",
     },
-    subtitle: {
+    metadata: {
       mt: 3,
-      fontSize: [2, 3],
+      fontSize: [1, 2],
       fontWeight: "body",
       letterSpacing: "headline",
       lineHeight: "subheading",
     },
-    headline: {
-      variant: "text.heading",
-      letterSpacing: "headline",
-      lineHeight: "heading",
-      fontSize: 4,
-      mt: 3,
-      mb: 3,
-    },
-    subheadline: {
-      variant: "text.heading",
-      letterSpacing: "headline",
-      fontSize: 2,
-      mt: 0,
-      mb: 3,
-    },
-    eyebrow: {
-      color: "muted",
-      fontSize: [3, 4],
-      fontWeight: "heading",
-      letterSpacing: "headline",
-      lineHeight: "subheading",
-      textTransform: "uppercase",
-      mt: 0,
-      mb: 2,
-    },
-    lead: {
-      fontSize: [2, 3],
-      my: [2, 3],
-    },
-    caption: {
-      color: "muted",
-      fontWeight: "medium",
-      letterSpacing: "headline",
-      lineHeight: "caption",
-    },
   },
-  alerts: {
-    primary: {
-      borderRadius: "default",
-      bg: "orange",
-      color: "background",
-      fontWeight: "body",
-    },
-  },
-  badges: {
-    pill: {
-      borderRadius: "circle",
-      px: 3,
-      py: 1,
-      fontSize: 1,
-    },
-    outline: {
-      variant: "badges.pill",
-      bg: "transparent",
-      border: "1px solid",
-      borderColor: "currentColor",
-      fontWeight: "body",
-    },
-  },
-  buttons: {
-    primary: {
-      cursor: "pointer",
-      fontFamily: "inherit",
+  article: {
+    display: "flex",
+    flexDirection: "column",
+
+    title: {
+      fontSize: [4, 5, 6],
       fontWeight: "bold",
-      borderRadius: "circle",
-      display: "inline-flex",
-      alignItems: "center",
-      justifyContent: "center",
-      boxShadow: "card",
+      letterSpacing: "title",
+      lineHeight: "title",
+    },
+    metadata: {
+      mt: 3,
+      fontSize: [1, 2],
+      fontWeight: "body",
       letterSpacing: "headline",
-      WebkitTapHighlightColor: "transparent",
-      transition: "transform .125s ease-in-out, box-shadow .125s ease-in-out",
-      ":focus,:hover": {
-        boxShadow: "elevated",
-        transform: "scale(1.0625)",
-      },
-      svg: {
-        ml: -1,
-        mr: 2,
-      },
-    },
-    lg: {
-      variant: "buttons.primary",
-      fontSize: 3,
-      lineHeight: "title",
-      px: 4,
-      py: 3,
-    },
-    outline: {
-      variant: "buttons.primary",
-      bg: "transparent",
-      color: "primary",
-      border: "2px solid currentColor",
-    },
-    outlineLg: {
-      variant: "buttons.primary",
-      bg: "transparent",
-      color: "primary",
-      border: "2px solid currentColor",
-      lineHeight: "title",
-      fontSize: 3,
-      px: 4,
-      py: 3,
-    },
-    cta: {
-      variant: "buttons.primary",
-      fontSize: 2,
-    },
-    ctaLg: {
-      variant: "buttons.primary",
-      lineHeight: "title",
-      fontSize: 3,
-      px: 4,
-      py: 3,
-    },
-  },
-  cards: {
-    primary: {
-      bg: "elevated",
-      color: "text",
-      p: [3, 4],
-      borderRadius: "extra",
-      boxShadow: "card",
-      overflow: "hidden",
-    },
-    sunken: {
-      bg: "sunken",
-      p: [3, 4],
-      borderRadius: "extra",
-    },
-    interactive: {
-      variant: "cards.primary",
-      textDecoration: "none",
-      WebkitTapHighlightColor: "transparent",
-      transition: "transform .125s ease-in-out, box-shadow .125s ease-in-out",
-      ":hover,:focus": {
-        transform: "scale(1.0625)",
-        boxShadow: "elevated",
-      },
-    },
-    translucent: {
-      backgroundColor: "rgba(255, 255, 255, 0.98)",
-      color: "text",
-      boxShadow: "none",
-      "@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none)": {
-        backgroundColor: "rgba(255, 255, 255, 0.75)",
-        backdropFilter: "saturate(180%) blur(20px)",
-        WebkitBackdropFilter: "saturate(180%) blur(20px)",
-      },
-      "@media (prefers-reduced-transparency: reduce)": {
-        backdropFilter: "none",
-        WebkitBackdropFilter: "none",
-      },
-    },
-    translucentDark: {
-      backgroundColor: "rgba(0, 0, 0, 0.875)",
-      color: "white",
-      boxShadow: "none",
-      "@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none)": {
-        backgroundColor: "rgba(0, 0, 0, 0.625)",
-        backdropFilter: "saturate(180%) blur(16px)",
-        WebkitBackdropFilter: "saturate(180%) blur(16px)",
-      },
-      "@media (prefers-reduced-transparency: reduce)": {
-        backdropFilter: "none",
-        WebkitBackdropFilter: "none",
-      },
-    },
-  },
-  forms: {
-    input: {
-      bg: "elevated",
-      color: "text",
-      fontFamily: "inherit",
-      borderRadius: "base",
-      border: 0,
-      "::-webkit-input-placeholder": {
-        color: "placeholder",
-      },
-      "::-moz-placeholder": {
-        color: "placeholder",
-      },
-      ":-ms-input-placeholder": {
-        color: "placeholder",
-      },
-      '&[type="search"]::-webkit-search-decoration': {
-        display: "none",
-      },
-    },
-    textarea: {
-      variant: "forms.input",
-    },
-    select: {
-      variant: "forms.input",
-    },
-    label: {
-      color: "text",
-      display: "flex",
-      flexDirection: "column",
-      textAlign: "left",
-      lineHeight: "caption",
-      fontSize: 2,
-    },
-    labelHoriz: {
-      color: "text",
-      display: "flex",
-      alignItems: "center",
-      textAlign: "left",
-      lineHeight: "caption",
-      fontSize: 2,
-      svg: {
-        color: "muted",
-      },
-    },
-    slider: {
-      color: "primary",
-    },
-    hidden: {
-      position: "absolute",
-      height: "1px",
-      width: "1px",
-      overflow: "hidden",
-      clip: "rect(1px, 1px, 1px, 1px)",
-      whiteSpace: "nowrap",
+      lineHeight: "subheading",
     },
   },
   grids: {
-    // TODO: make header resize
     root: {
-      gridGap: "2px",
-      //height: "100%",
-      width: "100%",
+      // TODO: common
+      // gridGap: "2px",
+      // height: "100%",
+      // width: "100%",
+      border: "solid",
     },
     layout: {
       variant: "grids.root",
       gridTemplateColumns: "1fr 4fr 1fr",
       gridTemplateRows: "max-content minmax(0, 100%) max-content",
-      height: "100vh", // TODO: y u no work
+      height: "100vh",
     },
     header: {
       variant: "grids.root",
-      backgroundColor: "header",
-      gridTemplateColumns: "1fr 4fr minmax(20px, 6fr) 8fr",
-      gridTemplateRows: "1fr",
+      borderColor: "pink",
+      gridColumn: "1 /4",
+      gridRow: "1",
+      gridTemplateColumns:
+        "1fr minmax(32px, 4fr) minmax(20px, 6fr) minmax(100px, 6fr)",
+      // gridTemplateRows: "1fr",
+
+      avatar: {
+        variant: "grids.root",
+        borderColor: "green",
+        gridColumn: "1",
+        gridRow: "1",
+        gridTemplateColumns: "1fr",
+        gridTemplateRows: "1fr",
+      },
+      social: {
+        variant: "grids.root",
+        borderColor: "green",
+        gridColumn: "2",
+        gridTemplateColumns: "repeat(auto-fit, 32px)",
+        //gridTemplateRows: "1fr",
+      },
+      empty: {
+        variant: "grids.root",
+        borderColor: "green",
+        gridColumn: "3 / 4",
+      },
+      navigation: {
+        variant: "grids.root",
+        borderColor: "green",
+        gridColumn: "4",
+        gridRow: "1",
+      },
     },
     footer: {
       variant: "grids.root",
       backgroundColor: "header",
+      gridColumn: "1 / 4",
+      gridRow: "3",
       gridTemplateColumns: "1fr",
       gridTemplateRows: "1fr",
     },
     sidebar: {
       variant: "grids.root",
+      borderColor: "green",
+      gridColumn: "3",
+      gridRow: "2 / 3",
       gridTemplateColumns: "1fr",
       gridTemplateRows: "auto",
     },
-    content: {
-      variant: "grids.root",
-      gridTemplateColumns: "1fr 1fr",
-      gridTemplateRows: "auto auto auto",
-    },
-    social: {
-      variant: "grids.root",
-      gridTemplateColumns: "repeat(auto-fit, minmax(32px, 1fr))",
-      //gridTemplateRows: "1fr",
-    },
-  },
-  boxes: {
-    root: {
-      border: "solid",
-      borderColor: "yellow",
-    },
-    default: {
-      variant: "boxes.root",
-    },
     page: {
-      variant: "boxes.root",
-      border: "solid",
-      borderColor: "orange",
+      borderColor: "pink",
+      gridColumn: "2 / 3",
+      gridRow: "2 / 3",
+      gridTemplateColumns: "1fr",
+      gridTemplateRows: "repeat(auto-fit, minmax(32px, 1fr))",
       maxHeight: "100%",
       overflow: "auto",
       "*::-webkit-scrollbar-thumb": {
         backgroundColor: "red", // TODO: y u no work
       },
-    },
-  },
-  flex: {
-    center: {
-      border: "solid",
-      borderColor: "green",
-      justifyContent: "space-evenly",
-      alignItems: "center",
-      height: "100%",
-      width: "100%",
+      content: {
+        variant: "grids.root",
+        borderColor: "green",
+        gridTemplateColumns: "1fr 1fr",
+        gridTemplateRows: "auto auto auto",
+
+        header: {
+          gridTemplateColumns: "1fr",
+          gridTemplateRows: "auto auto auto",
+        },
+      },
     },
   },
   lists: {
